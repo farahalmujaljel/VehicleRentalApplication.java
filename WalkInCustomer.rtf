@@ -1,0 +1,70 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12480\viewh16000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /*\
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license\
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template\
+ */\
+package vehiclerentalapplication;\
+import java.time.LocalDate;\
+\
+/**\
+ *\
+ * @author amani\
+ */\
+public class WalkInCustomer extends Customer \{\
+    private static String CAR_RENTED = "BMW SUV X5 2024";\
+    private static double COST = 1125.0;\
+    private LocalDate visitDate;\
+\
+    //constructor\
+    public WalkInCustomer(String customerName, String customerPhoneNumber, int customerAge, String customerId) \{\
+        super(customerName, customerPhoneNumber, customerAge, customerId);//call superclass constructor\
+        this.visitDate = LocalDate.now(); //sets visit date to current date\
+    \}\
+\
+    //override displayCustomerInfo to exclude age and id from info (superclass Customer)\
+    @Override\
+    public void displayCustomerInfo() \{\
+        System.out.println("               Customer Name: " + getCustomerName());\
+        System.out.println("               Phone Number: " + getCustomerPhoneNumber());\
+        \
+    \}\
+\
+    // method to display walk-in profile\
+      public void viewProfile() \{\
+        System.out.println("=========================================================");\
+        System.out.println("               Walk-In Customer Profile                 ");\
+        System.out.println("---------------------------------------------------------");\
+        displayCustomerInfo(); //uses the overridden method\
+        System.out.println("               Visit Date: " + visitDate);\
+        System.out.println("               Car Rented: " + CAR_RENTED);\
+        System.out.println("               Rental Cost:" + COST+" S.R");\
+        System.out.println("---------------------------------------------------------");\
+        System.out.println(" Walk-In Customers get a fixed car, price, and duration.");\
+        System.out.println("   If you would like more choices restart the program.");\
+        System.out.println("---------------------------------------------------------");\
+        System.out.println("\\n");\
+        System.out.println("=========================================================");\
+        System.out.println("               Vehicle rented successfully               ");\
+        System.out.println("=========================================================");\
+        System.out.println("  Thank you for using our Vehicle Rental Application.");\
+        System.out.println("     Drive carefully and embrace every journey!");\
+        System.out.println("\\n");\
+        System.out.println("        ______                 Vehicle Rental Application Team:");\
+        System.out.println("       /|_||_\\\\`.__             Amani Saeed Alghamdi.");\
+        System.out.println("      (   _    _ _\\\\            Farah Mustafa Almujaljel.");\
+        System.out.println("      =`-(_)--(_)-'            Khayal Suliman Alnomis.");\
+        System.out.println("        |       |              Reemas Tariq Aleid.");\
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");\
+        System.out.println("---------     ---------     ");\
+        System.out.println("     ---------     ---------");\
+        System.out.println("---------     ---------     ");\
+    \}\
+\
+\}\
+}
